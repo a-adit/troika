@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pigeon Battle Simulator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Pigeon Battle Simulator</h1>
+    
+    <button id="themeToggle">🌙 Toggle Dark Mode</button>
+
+    <form id="battleForm">
+      <label for="height">Height (cm):</label>
+      <input type="number" id="height" required />
+
+      <label for="weight">Weight (kg):</label>
+      <input type="number" id="weight" required />
+
+      <label for="breakfast">What did you eat for breakfast?</label>
+      <select id="breakfast" required>
+        <option value="">-- Choose --</option>
+        <option value="protein bar">Protein bar</option>
+        <option value="coffee">Just coffee</option>
+        <option value="leftover pizza">Leftover pizza</option>
+        <option value="air">Air</option>
+        <option value="oats">Oats</option>
+        <option value="pickle sandwich">Pickle sandwich</option>
+        <option value="raw egg">Raw egg</option>
+        <option value="cake">Cake</option>
+        <option value="chewing gum">Chewing gum</option>
+        <option value="spite">Spite</option>
+      </select>
+
+      <button type="submit" id="simulateBtn">Simulate Battle</button>
+    </form>
+
+    <div id="result" class="hidden"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

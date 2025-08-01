@@ -1,0 +1,87 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f2f2f2;
+  color: #222;
+  transition: background 0.3s, color 0.3s;
+}
+
+.container {
+  max-width: 500px;
+  margin: 50px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin: 15px 0 5px;
+}
+
+input, select, button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #777;
+  cursor: not-allowed;
+}
+
+#result {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #e0ffe0;
+  border-radius: 8px;
+  border: 1px solid #b2ffb2;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+#result.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hidden {
+  display: none;
+}
+
+.dark {
+  background: #121212;
+  color: #eee;
+}
+
+.dark .container {
+  background: #1e1e1e;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.dark input, .dark select, .dark button {
+  background: #333;
+  color: #eee;
+  border: 1px solid #555;
+}
+
+.dark #result {
+  background-color: #333d33;
+  border-color: #448844;
+}

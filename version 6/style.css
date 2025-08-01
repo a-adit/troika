@@ -1,0 +1,106 @@
+/* Import a fun Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Fredoka', sans-serif;
+  background: #fffbe6;
+  color: #333;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+h1 {
+  font-size: 1.8rem;
+  text-align: center;
+  color: #ff5c5c;
+  margin-bottom: 0.5rem;
+}
+
+.tagline {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+form label {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+  margin-top: 0.3rem;
+  font-size: 1rem;
+  background-color: #fdfdfd;
+  transition: border 0.2s;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #ffb347;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+  background-color: #ff5c5c;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background-color: #e04c4c;
+}
+
+#result {
+  margin-top: 2rem;
+  background-color: #f8f8ff;
+  border: 2px dashed #aaa;
+  padding: 1.2rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  color: #444;
+}
+
+#stabilityLabel {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 0.9rem;
+  color: #888;
+  font-style: italic;
+}
+
+.hidden {
+  display: none;
+}

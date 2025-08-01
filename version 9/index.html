@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Unhinged Animal Battle Sim</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>🧠 How many animals could you hypothetically take on in a fight</h1>
+
+    <form id="battleForm">
+      <label for="height">Your height (cm):</label>
+      <input type="number" id="height" required />
+
+      <label for="weight">Your weight (kg):</label>
+      <input type="number" id="weight" required />
+
+      <label for="breakfast">What did you have for breakfast?</label>
+      <select id="breakfast" required>
+        <option value="">-- Choose --</option>
+        <option>Pancakes</option>
+        <option>Nothing</option>
+        <option>Cold pizza</option>
+        <option>Red Bull and regrets</option>
+        <option>Protein shake</option>
+        <option>Leftover biryani</option>
+        <option>Air (diet mode)</option>
+        <option>Boiled egg</option>
+        <option>5 cups of coffee</option>
+        <option>Cereal with orange juice</option>
+        <option>Toast with existential dread</option>
+      </select>
+
+      <label for="stability">Choose your emotional stability:</label>
+      <select id="stability" required>
+        <option value="">-- Choose --</option>
+        <option>Emotionally bankrupt but thriving.</option>
+        <option>Cried during a toothpaste ad.</option>
+        <option>Unshaken by global events, shaken by a pigeon stare.</option>
+        <option>Stable like a chair with 3 legs.</option>
+        <option>Gaslit, gatekept, and girlbossed.</option>
+        <option>Spoke to a wall and it argued back.</option>
+        <option>Repressing 99 problems and counting.</option>
+        <option>At peace... until breakfast ran out.</option>
+        <option>Once fought a shadow and lost.</option>
+        <option>Surprisingly okay. Suspiciously okay.</option>
+      </select>
+
+      <label for="animal">Choose your enemy:</label>
+      <select id="animal" required>
+        <option value="">-- Choose --</option>
+        <option value="Shoebill Storks 🐦">Shoebill Storks 🐦</option>
+        <option value="Maned Wolves 🐺">Maned Wolves 🐺</option>
+        <option value="Aye-Ayes 🙈">Aye-Ayes 🙈</option>
+        <option value="Axolotls 🦎">Axolotls 🦎</option>
+        <option value="Cassowaries 🦃">Cassowaries 🦃</option>
+        <option value="Goblin Sharks 🦈">Goblin Sharks 🦈</option>
+        <option value="Platypuses 🦆">Platypuses 🦆</option>
+        <option value="Capybaras 🦫">Capybaras 🦫</option>
+        <option value="Emus 🐤">Emus 🐤</option>
+        <option value="Naked Mole Rats 🐀">Naked Mole Rats 🐀</option>
+      </select>
+
+      <button type="submit" id="simulateBtn">
+        <span class="text">Simulate Battle</span>
+        <span class="loading hidden">Simulating...</span>
+      </button>
+    </form>
+
+    <div id="result" class="hidden fade-in"></div>
+
+    <footer>
+      <button id="toggleDark">🌓 Toggle Dark Mode</button>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

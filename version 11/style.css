@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap');
+
+:root {
+  --bg: #fffbe6;
+  --text: #333;
+  --card: #fff;
+  --highlight: #ff5c5c;
+  --border: #ddd;
+  --input: #fdfdfd;
+  --secondary: #555;
+  --result-bg: #f8f8ff;
+}
+
+.dark {
+  --bg: #1a1a1a;
+  --text: #eee;
+  --card: #2a2a2a;
+  --highlight: #ff9e9e;
+  --border: #444;
+  --input: #333;
+  --secondary: #aaa;
+  --result-bg: #333333;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Fredoka', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  transition: background 0.3s, color 0.3s;
+}
+
+.container {
+  background-color: var(--card);
+  padding: 2rem 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  transition: background 0.3s;
+}
+
+h1 {
+  font-size: 1.8rem;
+  text-align: center;
+  color: var(--highlight);
+  margin-bottom: 0.5rem;
+}
+
+.tagline {
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--secondary);
+  margin-bottom: 2rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 10px;
+  border: 2px solid var(--border);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  background-color: var(--input);
+  color: var(--text);
+  transition: border 0.2s, background 0.3s;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--highlight);
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  background-color: var(--highlight);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background-color: #e04c4c;
+}
+
+#result {
+  margin-top: 2rem;
+  background-color: var(--result-bg);
+  border: 2px dashed var(--border);
+  padding: 1.2rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  color: var(--text);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+#result.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#stabilityLabel {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: var(--secondary);
+  font-style: italic;
+}
+
+.hidden {
+  display: none;
+}

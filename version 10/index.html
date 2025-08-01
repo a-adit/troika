@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pigeon Battle Simulator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <button id="toggleDark">Toggle Dark Mode 🌗</button>
+    <h1>Unhinged Animal Battle Simulator</h1>
+    <form id="battleForm">
+      <label>Height (cm):</label>
+      <input type="number" id="height" required />
+
+      <label>Weight (kg):</label>
+      <input type="number" id="weight" required />
+
+      <label>Choose your Breakfast:</label>
+      <select id="breakfast" required>
+        <option value="">--Choose--</option>
+        <option value="black coffee">Black Coffee</option>
+        <option value="leftover pizza">Leftover Pizza</option>
+        <option value="protein shake">Protein Shake</option>
+        <option value="air">Air</option>
+        <option value="pickle juice">Pickle Juice</option>
+        <option value="3 raw eggs">3 Raw Eggs</option>
+        <option value="banana and regret">Banana & Regret</option>
+        <option value="syrup shot">Syrup Shot</option>
+        <option value="expired milk">Expired Milk</option>
+        <option value="energy drink">Energy Drink</option>
+      </select>
+
+      <label>Emotional Stability:</label>
+      <input type="range" id="stability" min="0" max="4" step="1" />
+      <div id="stabilityLabel">Totally fine.</div>
+
+      <label>Choose your Opponent:</label>
+      <select id="animal" required>
+        <option value="">--Pick one--</option>
+        <option value="screaming capybaras">Screaming Capybaras 🦫</option>
+        <option value="rabid flamingos">Rabid Flamingos 🦩</option>
+        <option value="feral emus">Feral Emus 🐦</option>
+        <option value="angry taxidermy owls">Angry Taxidermy Owls 🦉</option>
+        <option value="underfed raccoons">Underfed Raccoons 🦝</option>
+      </select>
+
+      <button type="submit" id="simulateBtn">Simulate Battle</button>
+    </form>
+
+    <div id="result" class="hidden"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pigeon Battle Simulator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>How many animals could you hypothetically take on in a fight</h1>
+    <p class="tagline">Find out how many unhinged animals you could survive against.</p>
+
+    <label for="animal">Choose your opponent:</label>
+    <select id="animal">
+      <option value="pigeons">Mildly annoyed pigeons</option>
+      <option value="emus">Confused emus</option>
+      <option value="shoebills">Judgmental shoebills</option>
+      <option value="capybaras">Passive-aggressive capybaras</option>
+      <option value="cassowaries">Fashionable cassowaries</option>
+    </select>
+
+    <label for="height">Your Height (cm):</label>
+    <input type="number" id="height" />
+
+    <label for="weight">Your Weight (kg):</label>
+    <input type="number" id="weight" />
+
+    <label for="breakfast">What did you have for breakfast?</label>
+    <select id="breakfast">
+      <option value="nothing">Nothing</option>
+      <option value="coffee">Coffee (black)</option>
+      <option value="5eggs">5 Eggs</option>
+      <option value="proteinshake">Protein Shake</option>
+      <option value="leftoverpizza">Leftover Pizza</option>
+      <option value="banana">One sad banana</option>
+      <option value="paratha">Aloo Paratha with Pickle</option>
+      <option value="cereal">Cereal with water (ew)</option>
+      <option value="idli">Idli with 3 types of chutney</option>
+      <option value="chaos">Just chaos</option>
+    </select>
+
+    <label for="emotional">Emotional Stability:</label>
+    <input type="range" id="emotional" min="0" max="100" />
+    <p id="stabilityLabel">Select your chaos level</p>
+
+    <button id="simulateBtn">Simulate Battle</button>
+    <div id="result" class="hidden"></div>
+
+    <button id="toggleMode">Toggle Dark Mode</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Evil Tooth vs Pigeon Horde</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', sans-serif;
+      background: #f2f2f2;
+      padding: 20px;
+      text-align: center;
+    }
+    input, select, button {
+      padding: 10px;
+      margin: 10px;
+    }
+    .result {
+      margin-top: 20px;
+      font-size: 1.3em;
+      color: darkred;
+    }
+  </style>
+</head>
+<body>
+  <h1>🦷🐦 Evil Tooth vs. Pigeon Horde</h1>
+  <p>Find out how many pigeons you could defeat... unless your evil tooth gets in the way.</p>
+
+  <label>Height (cm): <input type="number" id="height" /></label><br/>
+  <label>Weight (kg): <input type="number" id="weight" /></label><br/>
+  <label>Emotional Stability:
+    <select id="stability">
+      <option value="1">Unstable</option>
+      <option value="2">Barely Holding On</option>
+      <option value="3">Zen Master</option>
+    </select>
+  </label><br/>
+  <label>Breakfast:
+    <select id="breakfast">
+      <option value="0">Skipped</option>
+      <option value="10">Cereal</option>
+      <option value="20">Bacon & Eggs</option>
+      <option value="30">Protein Shake + Regret</option>
+    </select>
+  </label><br/>
+  <label>Your Suspected Evil Tooth:
+    <select id="tooth">
+      <option value="molar">Upper Left Molar</option>
+      <option value="incisor">Bottom Right Incisor</option>
+      <option value="canine">Left Canine</option>
+      <option value="wisdom">Rogue Wisdom Tooth</option>
+      <option value="premolar">Front Premolar</option>
+    </select>
+  </label><br/>
+
+  <button onclick="simulate()">Simulate Doom</button>
+
+  <div class="result" id="result"></div>
+
+  <script>
+    function simulate() {
+      const height = parseInt(document.getElementById('height').value) || 0;
+      const weight = parseInt(document.getElementById('weight').value) || 0;
+      const stability = parseInt(document.getElementById('stability').value);
+      const breakfast = parseInt(document.getElementById('breakfast').value);
+      const userTooth = document.getElementById('tooth').value;
+
+      const evilTeeth = ["molar", "incisor", "canine", "wisdom", "premolar"];
+      const actualEvilTooth = evilTeeth[Math.floor(Math.random() * evilTeeth.length)];
+
+      let baseScore = (height * 0.4) + (weight * 0.3) + (stability * 15) + breakfast;
+      baseScore *= Math.random() * 0.5 + 0.75;
+
+      // Tooth betrayal logic
+      let bonus = 0;
+      let message = "";
+      if (userTooth === actualEvilTooth) {
+        bonus = 10;
+        message += `😈 You correctly identified the evil tooth (${actualEvilTooth}). You were mentally prepared. +10 points.\n`;
+      } else {
+        bonus = -15;
+        message += `🦷 Your ${actualEvilTooth} turned on you mid-battle. You dropped your guard. -15 points.\n`;
+      }
+
+      const finalScore = Math.max(0, Math.floor(baseScore + bonus));
+
+      message += `🕊️ You could defeat ${finalScore} pigeons.`;
+
+      if (finalScore > 100) {
+        message += "\n🔥 You're a feathered apocalypse.";
+      } else if (finalScore < 5) {
+        message += "\n😵 A toddler with breadcrumbs would do better.";
+      }
+
+      document.getElementById('result').textContent = message;
+    }
+  </script>
+</body>
+</html>

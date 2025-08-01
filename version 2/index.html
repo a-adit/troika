@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Evil Tooth vs. Pigeon Horde</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🦷 Evil Tooth vs. 🐦 Pigeon Horde</h1>
+    <p class="subtitle">
+      Battle a swarm of mildly aggressive pigeons, but beware—one of your teeth is secretly evil and sabotaging you from within.
+    </p>
+
+    <form id="battle-form">
+      <div class="inputs">
+        <input type="number" placeholder="Height (cm)" id="height" />
+        <input type="number" placeholder="Weight (kg)" id="weight" />
+      </div>
+
+      <label for="stability">Emotional Stability (1-10)</label>
+      <input type="range" min="1" max="10" value="5" id="stability" />
+
+      <label for="breakfast">What did you eat for breakfast?</label>
+      <select id="breakfast">
+        <option disabled selected>Select your breakfast...</option>
+        <option>Cold pizza</option>
+        <option>Dry toast</option>
+        <option>5 Red Bulls</option>
+        <option>Yogurt (but warm?)</option>
+        <option>Nothing. You fear food.</option>
+      </select>
+
+      <label for="tooth">🦷 Which tooth do you suspect is evil?</label>
+      <select id="tooth">
+        <option disabled selected>Choose your suspect...</option>
+        <option>Upper Left Molar</option>
+        <option>Front Right Incisor</option>
+        <option>Wisdom Tooth #3</option>
+        <option>That one you chipped on a spoon</option>
+        <option>The ghost of a baby tooth</option>
+      </select>
+
+      <button type="submit">Begin Battle Simulation →</button>
+    </form>
+
+    <div id="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

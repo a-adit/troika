@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Evil Tooth vs. Pigeon Horde</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="icons">
+        <span>💀</span>
+        <span>👤</span>
+      </div>
+      <h1>Evil Tooth vs. Pigeon Horde</h1>
+      <p class="subtitle">The Simulator</p>
+      <p class="description">
+        Battle a swarm of mildly aggressive pigeons, but beware—one of your teeth is secretly evil and sabotaging you from within.
+      </p>
+    </header>
+
+    <form class="form">
+      <div class="row">
+        <div class="input-group">
+          <label for="height">Height (cm)</label>
+          <input type="number" id="height" value="170" />
+        </div>
+        <div class="input-group">
+          <label for="weight">Weight (kg)</label>
+          <input type="number" id="weight" value="70" />
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label for="stability">Emotional Stability (1-10)</label>
+        <input type="range" id="stability" min="1" max="10" value="5" />
+        <div class="range-labels">
+          <span>Unstable</span>
+          <span>Rock Solid</span>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <label for="breakfast">What did you eat for breakfast?</label>
+        <select id="breakfast">
+          <option>Select your breakfast...</option>
+          <option>Toast</option>
+          <option>Cereal</option>
+          <option>Leftover Pizza</option>
+          <option>Nothing</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="tooth">🦷 Which tooth do you suspect is evil?</label>
+        <select id="tooth">
+          <option>Choose your suspect...</option>
+          <option>Upper Left Molar</option>
+          <option>Lower Right Canine</option>
+          <option>Front Tooth</option>
+          <option>Wisdom Tooth</option>
+        </select>
+      </div>
+
+      <button type="submit">Begin Battle Simulation →</button>
+    </form>
+  </div>
+</body>
+</html>

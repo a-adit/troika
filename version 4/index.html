@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Unlikely Animal Battle Simulator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🐦 Unlikely Animal Battle Simulator 🐹</h1>
+    <p class="tagline">Find out how many weird animals you could survive against.</p>
+
+    <form id="battleForm">
+      <label>Name:<br><input type="text" id="name" required /></label>
+
+      <label>Height (cm):<br><input type="number" id="height" required /></label>
+
+      <label>Weight (kg):<br><input type="number" id="weight" required /></label>
+
+      <label>Emotional Stability:<br>
+        <input type="range" id="stability" min="0" max="100" value="50" />
+        <span id="stabilityValue">50</span>
+      </label>
+
+      <label>Breakfast:<br>
+        <select id="breakfast">
+          <option value="cereal">Cereal</option>
+          <option value="coffee">Coffee</option>
+          <option value="raw_egg">Raw Egg</option>
+          <option value="air">Air</option>
+        </select>
+      </label>
+
+      <label>Preferred Weapon:<br>
+        <select id="weapon">
+          <option value="slipper">Slipper</option>
+          <option value="office_chair">Office Chair</option>
+          <option value="confidence">Confidence</option>
+          <option value="none">None</option>
+        </select>
+      </label>
+
+      <button type="submit">Simulate Battle</button>
+    </form>
+
+    <div id="result" class="hidden"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
